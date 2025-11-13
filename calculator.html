@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    #main {
+      height: 90vh;
+      width: 30vw;
+      padding: 20px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color:white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    #result {
+      height: 15vh;
+      border: 2px solid black;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      font-size: 28px;
+      padding: 25px;
+      text-align: right;
+      background-color: #eaeaea;
+    }
+
+    #body {
+      height: 63vh;
+      width: 100%;
+      border: 2px solid black;
+      border-radius: 10px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(5,1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+
+    button {
+      height: 60px;
+      font-size: 20px;
+      border-radius: 8px;
+      background-color: #d3d3d3;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #b0b0b0;
+    }
+    .clear {
+      grid-row: span 2;
+      background-color: #f44336;
+      color: white;
+    }
+
+    .equal {
+      grid-column: span 2;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <div id="result"></div>
+    <div id="body">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button>X</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>/</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>*</button>
+
+      <button class="clear">C</button>
+      <button>0</button>
+      <button>.</button>
+      <button>-</button>
+
+      <button class="equal">=</button>
+      <button>+</button>
+    </div>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
